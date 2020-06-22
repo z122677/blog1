@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>登录</title>
+        <meta charset="UTF-8">
+        <link type="text/css" rel="stylesheet" href="./js/layui/css/layui.css" th:href="@{/js/layui/css/layui.css}">
+        <link type="text/css" rel="stylesheet" href="./css/login.css" th:href="@{/css/login.css}"/>
+        <link type="text/css" rel="stylesheet" href="./css/particle.css" th:href="@{css/particle.css}"/>
+        <script type="text/javascript" src="./js/layui/layui.js" th:href="@{/js/layui/layui.js}"></script>
+        <script type="text/javascript" src="./js/jquery/jquery-3.2.1.min.js" th:href="@{/js/jquery/jquery-3.2.1.min.js}"></script>
+        <script type="text/javascript" src="./js/tweenMax/tweenMax-2.1.3.min.js" th:href="@{/js/tweenMax/tweenMax-2.1.3.min.js}"></script>
+    </head>
+    <body>
+        <canvas class="particle"></canvas>
+        <form th:action="@{/admin/login}" method="post">
+        <p class="username-module">
+            <i class="layui-icon layui-icon-username"></i>
+            <input type="text" name="username" placeholder="账号"/>
+        </p>
+        <p class="password-module">
+            <i class="layui-icon layui-icon-password"></i>
+            <input type="password" name="password" placeholder="密码" autocomplete="off"/>
+        </p>
+<!--        <p class="valid-code-module">-->
+<!--            <i class="layui-icon layui-icon-vercode"></i>-->
+<!--            <input type="text" placeholder="验证码" autocomplete="off"/>-->
+<!--            <img src="./0004265134.jfif"/>-->
+<!--        </p>-->
+        <button class="login-module">
+            <input type="button" value="登录"/>
+        </button>
+        </form>
+        <script type="text/javascript" src="./js/particle.js" th:href="@{/js/particle.js}"></script>
+        <script type="text/javascript" src="./js/login.js" th:href="@{/js/login.js}"></script>
+    </body>
+</html>

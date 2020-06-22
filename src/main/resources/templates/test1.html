@@ -1,0 +1,72 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
+    <link rel="stylesheet" href="../static/css/animate.css" th:href="@{/css/animate.css}" >
+    <link rel="stylesheet" href="../static/css/typo.css" th:href="@{/css/typo.css}">
+    <link rel="stylesheet" href="../static/css/me.css" th:href="@{/css/me.css}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <style th:inline="text">
+        #body {
+            background-image:url("/images/Header.png") !important;
+            background-size: 100%!important;
+            background-repeat:no-repeat!important;
+            background-attachment:fixed!important;
+        }
+    </style>
+</head>
+<body id="body">
+<div style="height: 100%!important;width: 100%!important;" class="ui dimmer">
+    <div class="ui five rows centered grid animated zoomIn" style="vertical-align:center!important;">
+        <div class="row">
+            <img class="ui centered medium circular image m-circle" src="http://dingyue.ws.126.net/2020/0514/f2b1df29j00qablbq000lc000b400b4c.jpg">
+        </div>
+        <div class="row">
+            <h1 class="typo-h1 m-letter" style="color:#f1f1f1;">方子落雪,唯纸笔谈</h1>
+        </div>
+        <div class="row">
+            <p class="typo-p m-letter" id="text" style="color:#f1f1f1;"></p>
+        </div>
+        <div class="centered row m-margin-top m-letter">
+            <a href="https://github.com/z122677" target="_blank" class="ui circular icon button m-margin-lr"><i class="github icon"></i></a>
+            <a href="#" class="ui weChat circular icon button m-margin-lr"><i class="weixin icon"></i></a>
+            <a href="#" class="ui qq circular icon button m-margin-lr" data-content="1226776310" data-position="bottom center"><i class="qq icon"></i></a>
+        </div>
+        <div class="centered row m-margin-top-large m-opacity-mini">
+            <a href="#" th:href="@{/index}">
+            <div class="large ui right labeled icon button teal">
+                <i class="right arrow icon"></i>
+                Blog
+            </div>
+            </a>
+        </div>
+        <div class="ui weChat-qr flowing popup transition hidden m-padded-tiny">
+            <img src="/images/wechat.jpg" th:src="@{/images/wechat.png}" alt="" class="ui rounded image" style="width: 120px;">
+        </div>
+    </div>
+
+</div>
+<script>
+    $('#body')
+        .dimmer({
+            on: 'hover'
+        })
+    ;
+    $('.qq').popup();
+    $('.weChat').popup({
+        popup : $('.weChat-qr'),
+
+        position: 'bottom center'
+    });
+    new TypeIt("#text", {
+        strings: "灵明无着,物来顺应,未来不迎,当时不杂,即过不恋。",
+        speed: 150,
+        waitUntilVisible: true
+    }).go();
+
+</script>
+</body>
+</html>

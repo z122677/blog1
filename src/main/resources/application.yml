@@ -1,0 +1,6 @@
+spring:
+  profiles:
+    active: pro
+
+
+comment.avatar: /images/me.png

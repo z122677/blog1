@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+.username-module, .password-module, .valid-code-module, .login-module {
+    position: absolute;
+    left: calc(50% - 136px);
+    color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+}
+
+.username-module {
+    top: 27%;
+}
+
+.password-module {
+    top: calc(27% + 58px);
+}
+
+.valid-code-module {
+    top: calc(27% + 116px);
+}
+
+.login-module {
+    top: calc(27% + 174px);
+}
+
+.username-module i, .password-module i, .valid-code-module i {
+    position: absolute;
+    left: 8px;
+}
+
+.username-module input, .password-module input, .valid-code-module input, .login-module input {
+    height: 35px;
+    background-color: rgb(0, 0, 0);
+    border: 1px solid rgb(42, 65, 134);
+    color: rgb(255, 255, 255);
+}
+
+.username-module input, .password-module input, .valid-code-module input {
+    text-indent: 30px;
+}
+
+.username-module input, .password-module input, .login-module input {
+    width: 270px;
+}
+
+.valid-code-module input {
+    width: 158px;
+}
+
+.valid-code-module img {
+    height: 37px;
+    width: 107px;
+    margin-left: 5px;
+}
+
+.valid-code-module img, .login-module input {
+    cursor: pointer;
+}
+
+.login-module input {
+    box-sizing: inherit;
+}
